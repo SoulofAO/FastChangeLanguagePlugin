@@ -2,54 +2,82 @@
 
 #include "ChangeLanguage.h"
 #include "LevelEditor.h"
-#include "ChangeLanguageBPLibrary.h"
 #include "BlueprintEditorModule.h"
+#include "Kismet/KismetInternationalizationLibrary.h"
+
 #define LOCTEXT_NAMESPACE "FChangeLanguageModule"
 
 void FChangeLanguageModule::StartupModule()
 {
     // Register the commands
-    FChangeLanguageCommand::Register();
-
+    ChangeLanguageDeveloperSettings = const_cast<UChangeLanguageDeveloperSettings*>(GetDefault<UChangeLanguageDeveloperSettings>());
     auto Lambada =
-        FExecuteAction::CreateLambda([]()
+        ([&]()
             {
                 // Simply log for this example
-                UChangeLanguageDeveloperSettings* SGSettings = const_cast<UChangeLanguageDeveloperSettings*>(GetDefault<UChangeLanguageDeveloperSettings>());
-                FString LCurrentLanguage = UChangeLanguageBPLibrary::GetEditorLanguage();
-                if (LCurrentLanguage == SGSettings->MainLanguage)
+                FString LCurrentLanguage = UKismetInternationalizationLibrary::GetCurrentLanguage();
+                if (LCurrentLanguage == ChangeLanguageDeveloperSettings->MainLanguage)
                 {
-                    UChangeLanguageBPLibrary::ChangeEditorLanguage(SGSettings->SupportLanguage);
+                    UKismetInternationalizationLibrary::SetCurrentLanguageAndLocale(ChangeLanguageDeveloperSettings->SupportLanguage, true);
                 }
                 else
                 {
-                    UChangeLanguageBPLibrary::ChangeEditorLanguage(SGSettings->MainLanguage);
+                    UKismetInternationalizationLibrary::SetCurrentLanguageAndLocale(ChangeLanguageDeveloperSettings->MainLanguage, true);
                 }
             });
- 
-    FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
-    const FLevelEditorModule& LevelEditor = FModuleManager::GetModuleChecked<FLevelEditorModule>("LevelEditor");
+    
+    auto UpdateSettings =
+        ([&](UObject* Object, FPropertyChangedEvent& PropertyChangedEvent)
+            {
+                ChangeLanguageProcessor->ActiveKeys.Empty();
+                ChangeLanguageProcessor->KeysToActivate = ChangeLanguageDeveloperSettings->ChangeLanguageComboKeys;
+            });
 
-    const TSharedRef<FUICommandList> Commands = LevelEditor.GetGlobalLevelEditorActions();
-
-    Commands->MapAction(
-        FChangeLanguageCommand::Get().ChangeLanguageEntry, Lambada);
-
-
-    FModuleManager::LoadModuleChecked<FBlueprintEditorModule>("Kismet");
-    const FBlueprintEditorModule& BlueprintEditorModule = FModuleManager::GetModuleChecked<FBlueprintEditorModule>("Kismet");
-
-    BlueprintEditorModule.GetsSharedBlueprintEditorCommands().Get().MapAction(
-        FChangeLanguageCommand::Get().ChangeLanguageEntry, Lambada);
-}
+    ChangeLanguageProcessor = MakeShared<FComboActionInputProcessor>();
+    ChangeLanguageDeveloperSettings->OnSettingChanged().AddLambda(UpdateSettings);
+    ChangeLanguageProcessor->ActionActiveDelegate.BindLambda(Lambada);
+    ChangeLanguageProcessor->ActiveKeys.Empty();
+    ChangeLanguageProcessor->KeysToActivate = ChangeLanguageDeveloperSettings->ChangeLanguageComboKeys;
+    FSlateApplication::Get().RegisterInputPreProcessor(ChangeLanguageProcessor, 0);
+};
 
 void FChangeLanguageModule::ShutdownModule()
 {
     // Unregister the commands
-    FChangeLanguageCommand::Unregister();
 }
 
 
 #undef LOCTEXT_NAMESPACE
 	
 IMPLEMENT_MODULE(FChangeLanguageModule, ChangeLanguage)
+
+void FComboActionInputProcessor::Tick(const float DeltaTime, FSlateApplication& SlateApp, TSharedRef<ICursor> Cursor)
+{
+}
+
+bool FComboActionInputProcessor::HandleKeyUpEvent(FSlateApplication& SlateApp, const FKeyEvent& InKeyEvent)
+{
+    ActiveKeys.Remove(InKeyEvent.GetKey());
+    CheckKey();
+    return true;
+}
+
+bool FComboActionInputProcessor::HandleKeyDownEvent(FSlateApplication& SlateApp, const FKeyEvent& InKeyEvent)
+{
+    ActiveKeys.Add(InKeyEvent.GetKey());
+    CheckKey();
+    return true;
+}
+
+void FComboActionInputProcessor::CheckKey()
+{
+    for (FKey LKey : KeysToActivate)
+    {
+        if (!ActiveKeys.Contains(LKey))
+        {
+            return;
+        }
+    }
+    ActionActiveDelegate.Execute();
+}
+
