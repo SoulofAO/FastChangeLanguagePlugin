@@ -6,6 +6,7 @@ Distributed under the MIT license
 The plugin versions are in the branches.
 Supported - UE5.4.
 
+To install plugin put it in Plugins folder in project folder and compile project.
 Documentation:
 Eng. 
 https://docs.google.com/document/d/1B7m4NP8b2KFlOA-RfH7uK8F2jlLIUCKBgWxCQaGEWbI/edit?usp=sharing
