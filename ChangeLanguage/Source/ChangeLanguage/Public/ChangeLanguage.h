@@ -48,7 +48,7 @@ public:
 	TArray<FKey> ActiveKeys;
 
 private:
-	void CheckKey();
+	bool CheckKey();
 };
 
 class FChangeLanguageModule : public IModuleInterface

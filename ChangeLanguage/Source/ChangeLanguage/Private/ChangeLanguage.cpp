@@ -38,7 +38,7 @@ void FChangeLanguageModule::StartupModule()
     ChangeLanguageProcessor->ActionActiveDelegate.BindLambda(Lambada);
     ChangeLanguageProcessor->ActiveKeys.Empty();
     ChangeLanguageProcessor->KeysToActivate = ChangeLanguageDeveloperSettings->ChangeLanguageComboKeys;
-    FSlateApplication::Get().RegisterInputPreProcessor(ChangeLanguageProcessor, 0);
+    FSlateApplication::Get().RegisterInputPreProcessor(ChangeLanguageProcessor);
 };
 
 void FChangeLanguageModule::ShutdownModule()
@@ -58,26 +58,25 @@ void FComboActionInputProcessor::Tick(const float DeltaTime, FSlateApplication& 
 bool FComboActionInputProcessor::HandleKeyUpEvent(FSlateApplication& SlateApp, const FKeyEvent& InKeyEvent)
 {
     ActiveKeys.Remove(InKeyEvent.GetKey());
-    CheckKey();
-    return true;
+    return CheckKey();
 }
 
 bool FComboActionInputProcessor::HandleKeyDownEvent(FSlateApplication& SlateApp, const FKeyEvent& InKeyEvent)
 {
     ActiveKeys.Add(InKeyEvent.GetKey());
-    CheckKey();
-    return true;
+    return CheckKey();
 }
 
-void FComboActionInputProcessor::CheckKey()
+bool FComboActionInputProcessor::CheckKey()
 {
     for (FKey LKey : KeysToActivate)
     {
         if (!ActiveKeys.Contains(LKey))
         {
-            return;
+            return false;
         }
     }
     ActionActiveDelegate.Execute();
+    return true;
 }
 
