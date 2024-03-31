@@ -80,3 +80,13 @@ bool FComboActionInputProcessor::CheckKey()
     return true;
 }
 
+FName UChangeLanguageDeveloperSettings::GetCategoryName() const
+{
+    return TEXT("Plugins");
+}
+
+
+FName UChangeLanguageDeveloperSettings::GetSectionName() const
+{
+    return TEXT("Change Language Settings");;
+}
