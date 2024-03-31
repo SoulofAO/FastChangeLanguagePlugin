@@ -18,13 +18,13 @@ class UChangeLanguageDeveloperSettings : public UDeveloperSettings
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(Config, EditAnywhere,BlueprintReadOnly, Category = "Change Language Settings")
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly)
 	FString MainLanguage = "en";
 
-	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Change Language Settings")
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly)
 	FString SupportLanguage = "ru";
 
-	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Change Language Settings")
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly)
 	TArray<FKey> ChangeLanguageComboKeys = { EKeys::LeftShift, EKeys::Z };
 
 	virtual FName GetCategoryName() const override;
