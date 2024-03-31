@@ -35,15 +35,15 @@ struct Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics
 		{ "ModuleRelativePath", "Public/ChangeLanguage.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainLanguage_MetaData[] = {
-		{ "Category", "ChangeLanguageDeveloperSettings" },
+		{ "Category", "Change Language Settings" },
 		{ "ModuleRelativePath", "Public/ChangeLanguage.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SupportLanguage_MetaData[] = {
-		{ "Category", "ChangeLanguageDeveloperSettings" },
+		{ "Category", "Change Language Settings" },
 		{ "ModuleRelativePath", "Public/ChangeLanguage.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChangeLanguageComboKeys_MetaData[] = {
-		{ "Category", "ChangeLanguageDeveloperSettings" },
+		{ "Category", "Change Language Settings" },
 		{ "ModuleRelativePath", "Public/ChangeLanguage.h" },
 	};
 #endif // WITH_METADATA
@@ -110,10 +110,10 @@ UChangeLanguageDeveloperSettings::~UChangeLanguageDeveloperSettings() {}
 struct Z_CompiledInDeferFile_FID_TestUE54Project_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UChangeLanguageDeveloperSettings, UChangeLanguageDeveloperSettings::StaticClass, TEXT("UChangeLanguageDeveloperSettings"), &Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UChangeLanguageDeveloperSettings), 1078265267U) },
+		{ Z_Construct_UClass_UChangeLanguageDeveloperSettings, UChangeLanguageDeveloperSettings::StaticClass, TEXT("UChangeLanguageDeveloperSettings"), &Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UChangeLanguageDeveloperSettings), 1713974041U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TestUE54Project_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_31158568(TEXT("/Script/ChangeLanguage"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TestUE54Project_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_2547382901(TEXT("/Script/ChangeLanguage"),
 	Z_CompiledInDeferFile_FID_TestUE54Project_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TestUE54Project_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

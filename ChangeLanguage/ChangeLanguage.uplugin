@@ -14,11 +14,15 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
+
 	"Modules": [
 		{
 			"Name": "ChangeLanguage",
-			"Type": "Runtime",
-			"LoadingPhase": "PostEngineInit"
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+ 			"Win64", "Linux", "Mac"
+			 ]
 		}
 	]
 }
