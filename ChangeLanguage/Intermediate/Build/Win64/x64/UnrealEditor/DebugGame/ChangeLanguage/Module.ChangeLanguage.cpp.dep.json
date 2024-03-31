@@ -1,0 +1,18 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\testue54project\\plugins\\changelanguage\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\changelanguage\\module.changelanguage.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\testue54project\\intermediate\\build\\win64\\x64\\testue54projecteditor\\debuggame\\unrealed\\sharedpch.unrealed.project.nonoptimized.valapi.cpp20.inclorderoldest.h.pch",
+        "Includes": [
+            "g:\\testue54project\\plugins\\changelanguage\\intermediate\\build\\win64\\x64\\unrealeditor\\debuggame\\changelanguage\\definitions.changelanguage.h",
+            "g:\\testue54project\\plugins\\changelanguage\\intermediate\\build\\win64\\unrealeditor\\inc\\changelanguage\\uht\\changelanguage.gen.cpp",
+            "g:\\testue54project\\plugins\\changelanguage\\source\\changelanguage\\public\\changelanguage.h",
+            "g:\\ue\\ue_5.4\\engine\\source\\runtime\\slate\\public\\framework\\application\\iinputprocessor.h",
+            "g:\\testue54project\\plugins\\changelanguage\\intermediate\\build\\win64\\unrealeditor\\inc\\changelanguage\\uht\\changelanguage.generated.h",
+            "g:\\testue54project\\plugins\\changelanguage\\intermediate\\build\\win64\\unrealeditor\\inc\\changelanguage\\uht\\changelanguage.init.gen.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

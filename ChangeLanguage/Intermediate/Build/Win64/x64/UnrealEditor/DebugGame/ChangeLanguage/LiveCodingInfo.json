@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ChangeLanguage.cpp.obj": [
+			"ChangeLanguage.gen.cpp.obj",
+			"ChangeLanguage.init.gen.cpp.obj",
+			"ChangeLanguage.cpp.obj"
+		]
+	}
+}

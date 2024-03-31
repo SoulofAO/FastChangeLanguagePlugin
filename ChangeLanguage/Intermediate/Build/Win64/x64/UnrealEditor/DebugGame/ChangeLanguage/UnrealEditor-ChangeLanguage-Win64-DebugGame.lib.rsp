@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-ChangeLanguage-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"G:\TestUE54Project\Intermediate\Build\Win64\x64\TestUE54ProjectEditor\DebugGame\UnrealEd\SharedPCH.UnrealEd.Project.NonOptimized.ValApi.Cpp20.InclOrderOldest.h.obj"
+"G:\TestUE54Project\Plugins\ChangeLanguage\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\ChangeLanguage\Module.ChangeLanguage.cpp.obj"
+"G:\TestUE54Project\Plugins\ChangeLanguage\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\ChangeLanguage\ChangeLanguage.cpp.obj"
+"G:\TestUE54Project\Plugins\ChangeLanguage\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\ChangeLanguage\Default.rc2.res"
+/OUT:"G:\TestUE54Project\Plugins\ChangeLanguage\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\ChangeLanguage\UnrealEditor-ChangeLanguage-Win64-DebugGame.lib"
