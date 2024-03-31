@@ -4,7 +4,7 @@ Distributed under the MIT license
 (Free distribution at the mention of the author).
 
 The plugin versions are in the branches.
-Supported - UE5.4.
+Supported - UE 5.1 -5.4.
 Build Version branches are compiled versions of plugins for working with Blueprint Only projects.
 
 To install plugin put it in Plugins folder in project folder and compile project.
