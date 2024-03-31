@@ -12,20 +12,23 @@
 
 DECLARE_DELEGATE(FActionKeySelectedDelegate);
 
-UCLASS(config = EditorPerProjectUserSettings, meta = (DisplayName = "ChangeLanguage")) // Give it a better looking name in UI
+UCLASS(config = EditorPerProjectUserSettings) // Give it a better looking name in UI
 class UChangeLanguageDeveloperSettings : public UDeveloperSettings
 {
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "General")
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly)
 	FString MainLanguage = "en";
 
-	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "General")
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly)
 	FString SupportLanguage = "ru";
 
-	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "General")
+	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly)
 	TArray<FKey> ChangeLanguageComboKeys = { EKeys::LeftShift, EKeys::Z };
+
+	virtual FName GetCategoryName() const override;
+	virtual FName GetSectionName() const override;
 
 };
 
