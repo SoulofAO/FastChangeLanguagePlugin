@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "../../../../PluginPackage/UE54/ChangeLanguage/ChangeLanguage/HostProject/Plugins/ChangeLanguage/Source/ChangeLanguage/Public/ChangeLanguage.h"
+#include "../../../../PluginPackage/UE54/ChangeLanguage/HostProject/Plugins/ChangeLanguage/Source/ChangeLanguage/Public/ChangeLanguage.h"
 #include "Runtime/InputCore/Classes/InputCoreTypes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeChangeLanguage() {}
@@ -107,14 +107,14 @@ UChangeLanguageDeveloperSettings::~UChangeLanguageDeveloperSettings() {}
 // End Class UChangeLanguageDeveloperSettings
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_PluginPackage_UE54_ChangeLanguage_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics
+struct Z_CompiledInDeferFile_FID_PluginPackage_UE54_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_UChangeLanguageDeveloperSettings, UChangeLanguageDeveloperSettings::StaticClass, TEXT("UChangeLanguageDeveloperSettings"), &Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UChangeLanguageDeveloperSettings), 1713974041U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PluginPackage_UE54_ChangeLanguage_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_2547382901(TEXT("/Script/ChangeLanguage"),
-	Z_CompiledInDeferFile_FID_PluginPackage_UE54_ChangeLanguage_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PluginPackage_UE54_ChangeLanguage_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PluginPackage_UE54_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_2547382901(TEXT("/Script/ChangeLanguage"),
+	Z_CompiledInDeferFile_FID_PluginPackage_UE54_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PluginPackage_UE54_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration
