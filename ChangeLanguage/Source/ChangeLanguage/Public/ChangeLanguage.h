@@ -22,7 +22,7 @@ public:
 	FString MainLanguage = "en";
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Change Language Settings")
-	FString SupportLanguage = "ru";
+	FString SupportLanguage = "zh-Hans";
 
 	UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "Change Language Settings")
 	TArray<FKey> ChangeLanguageComboKeys = { EKeys::LeftShift, EKeys::Z };
