@@ -3,6 +3,7 @@
 #include "ChangeLanguage.h"
 #include "LevelEditor.h"
 #include "BlueprintEditorModule.h"
+#include "InternationalizationSettingsModel.h"
 #include "Kismet/KismetInternationalizationLibrary.h"
 
 #define LOCTEXT_NAMESPACE "FChangeLanguageModule"
@@ -16,13 +17,31 @@ void FChangeLanguageModule::StartupModule()
             {
                 // Simply log for this example
                 FString LCurrentLanguage = UKismetInternationalizationLibrary::GetCurrentLanguage();
+                FString NewLanguage = "";
                 if (LCurrentLanguage == ChangeLanguageDeveloperSettings->MainLanguage)
                 {
-                    UKismetInternationalizationLibrary::SetCurrentLanguageAndLocale(ChangeLanguageDeveloperSettings->SupportLanguage, true);
+                    NewLanguage = ChangeLanguageDeveloperSettings->SupportLanguage;
                 }
                 else
                 {
-                    UKismetInternationalizationLibrary::SetCurrentLanguageAndLocale(ChangeLanguageDeveloperSettings->MainLanguage, true);
+                    NewLanguage = ChangeLanguageDeveloperSettings->MainLanguage;
+                }
+
+                UKismetInternationalizationLibrary::SetCurrentLanguageAndLocale(NewLanguage, true);
+
+                UInternationalizationSettingsModel* InternationalizationSettingsModel = GetMutableDefault<UInternationalizationSettingsModel>();
+                InternationalizationSettingsModel->SetEditorLanguage(NewLanguage);
+                FInternationalization& I18N = FInternationalization::Get();
+                I18N.SetCurrentLanguage(NewLanguage);
+
+                for (TObjectIterator<UClass> ClassIt; ClassIt; ++ClassIt)
+                {
+                    UClass* CurrentClass = *ClassIt;
+
+                    if (UEdGraphSchema* Schema = Cast<UEdGraphSchema>(CurrentClass->GetDefaultObject()))
+                    {
+                        Schema->ForceVisualizationCacheClear();
+                    }
                 }
             });
     
