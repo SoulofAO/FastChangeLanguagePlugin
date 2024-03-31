@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "ChangeLanguagePlugin",
+	"Description": "",
+	"Category": "Other",
+	"CreatedBy": "AO",
+	"CreatedByURL": "https://github.com/SoulofAO/FastChangeLanguagePlugin",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "sgsggssg1@gmail.com",
+	"EngineVersion": "5.4.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "ChangeLanguage",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux",
+				"Mac"
+			]
+		}
+	]
+}
