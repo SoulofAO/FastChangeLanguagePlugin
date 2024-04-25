@@ -42,7 +42,8 @@ public class ChangeLanguage : ModuleRules
 				"ToolMenus",
                 "InputCore",
                 "LevelEditor",
-                "DeveloperSettings"
+                "DeveloperSettings",
+                "UnrealEd"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
