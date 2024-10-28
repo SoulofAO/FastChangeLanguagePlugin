@@ -10,6 +10,7 @@
 
 void FChangeLanguageModule::StartupModule()
 {
+
     // Register the commands
     ChangeLanguageDeveloperSettings = const_cast<UChangeLanguageDeveloperSettings*>(GetDefault<UChangeLanguageDeveloperSettings>());
     auto Lambada =
@@ -44,7 +45,7 @@ void FChangeLanguageModule::StartupModule()
                     }
                 }
             });
-    
+
     auto UpdateSettings =
         ([&](UObject* Object, FPropertyChangedEvent& PropertyChangedEvent)
             {
@@ -57,7 +58,11 @@ void FChangeLanguageModule::StartupModule()
     ChangeLanguageProcessor->ActionActiveDelegate.BindLambda(Lambada);
     ChangeLanguageProcessor->ActiveKeys.Empty();
     ChangeLanguageProcessor->KeysToActivate = ChangeLanguageDeveloperSettings->ChangeLanguageComboKeys;
-    FSlateApplication::Get().RegisterInputPreProcessor(ChangeLanguageProcessor);
+
+    if (FSlateApplication::IsInitialized())
+    {
+        FSlateApplication::Get().RegisterInputPreProcessor(ChangeLanguageProcessor);
+    }
 };
 
 void FChangeLanguageModule::ShutdownModule()
