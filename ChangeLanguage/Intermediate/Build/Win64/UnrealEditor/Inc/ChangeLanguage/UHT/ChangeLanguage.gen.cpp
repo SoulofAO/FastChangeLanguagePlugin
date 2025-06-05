@@ -5,27 +5,53 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "ChangeLanguage/Public/ChangeLanguage.h"
-#include "Runtime/InputCore/Classes/InputCoreTypes.h"
+#include "ChangeLanguage.h"
+#include "InputCoreTypes.h"
+
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
 void EmptyLinkFunctionForGeneratedCodeChangeLanguage() {}
 
-// Begin Cross Module References
+// ********** Begin Cross Module References ********************************************************
 CHANGELANGUAGE_API UClass* Z_Construct_UClass_UChangeLanguageDeveloperSettings();
 CHANGELANGUAGE_API UClass* Z_Construct_UClass_UChangeLanguageDeveloperSettings_NoRegister();
 DEVELOPERSETTINGS_API UClass* Z_Construct_UClass_UDeveloperSettings();
 INPUTCORE_API UScriptStruct* Z_Construct_UScriptStruct_FKey();
 UPackage* Z_Construct_UPackage__Script_ChangeLanguage();
-// End Cross Module References
+// ********** End Cross Module References **********************************************************
 
-// Begin Class UChangeLanguageDeveloperSettings
+// ********** Begin Class UChangeLanguageDeveloperSettings *****************************************
 void UChangeLanguageDeveloperSettings::StaticRegisterNativesUChangeLanguageDeveloperSettings()
 {
 }
-IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UChangeLanguageDeveloperSettings);
+FClassRegistrationInfo Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings;
+UClass* UChangeLanguageDeveloperSettings::GetPrivateStaticClass()
+{
+	using TClass = UChangeLanguageDeveloperSettings;
+	if (!Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings.InnerSingleton)
+	{
+		GetPrivateStaticClassBody(
+			StaticPackage(),
+			TEXT("ChangeLanguageDeveloperSettings"),
+			Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings.InnerSingleton,
+			StaticRegisterNativesUChangeLanguageDeveloperSettings,
+			sizeof(TClass),
+			alignof(TClass),
+			TClass::StaticClassFlags,
+			TClass::StaticClassCastFlags(),
+			TClass::StaticConfigName(),
+			(UClass::ClassConstructorType)InternalConstructor<TClass>,
+			(UClass::ClassVTableHelperCtorCallerType)InternalVTableHelperCtorCaller<TClass>,
+			UOBJECT_CPPCLASS_STATICFUNCTIONS_FORCLASS(TClass),
+			&TClass::Super::StaticClass,
+			&TClass::WithinClass::StaticClass
+		);
+	}
+	return Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings.InnerSingleton;
+}
 UClass* Z_Construct_UClass_UChangeLanguageDeveloperSettings_NoRegister()
 {
-	return UChangeLanguageDeveloperSettings::StaticClass();
+	return UChangeLanguageDeveloperSettings::GetPrivateStaticClass();
 }
 struct Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics
 {
@@ -60,8 +86,8 @@ struct Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::NewProp_MainLanguage = { "MainLanguage", nullptr, (EPropertyFlags)0x0010000000004015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UChangeLanguageDeveloperSettings, MainLanguage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainLanguage_MetaData), NewProp_MainLanguage_MetaData) };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::NewProp_SupportLanguage = { "SupportLanguage", nullptr, (EPropertyFlags)0x0010000000004015, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UChangeLanguageDeveloperSettings, SupportLanguage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SupportLanguage_MetaData), NewProp_SupportLanguage_MetaData) };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::NewProp_ChangeLanguageComboKeys_Inner = { "ChangeLanguageComboKeys", nullptr, (EPropertyFlags)0x0000000000004000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FKey, METADATA_PARAMS(0, nullptr) }; // 658672854
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::NewProp_ChangeLanguageComboKeys = { "ChangeLanguageComboKeys", nullptr, (EPropertyFlags)0x0010000000004015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UChangeLanguageDeveloperSettings, ChangeLanguageComboKeys), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChangeLanguageComboKeys_MetaData), NewProp_ChangeLanguageComboKeys_MetaData) }; // 658672854
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::NewProp_ChangeLanguageComboKeys_Inner = { "ChangeLanguageComboKeys", nullptr, (EPropertyFlags)0x0000000000004000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FKey, METADATA_PARAMS(0, nullptr) }; // 3982742631
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::NewProp_ChangeLanguageComboKeys = { "ChangeLanguageComboKeys", nullptr, (EPropertyFlags)0x0010000000004015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UChangeLanguageDeveloperSettings, ChangeLanguageComboKeys), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChangeLanguageComboKeys_MetaData), NewProp_ChangeLanguageComboKeys_MetaData) }; // 3982742631
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::NewProp_MainLanguage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics::NewProp_SupportLanguage,
@@ -97,25 +123,22 @@ UClass* Z_Construct_UClass_UChangeLanguageDeveloperSettings()
 	}
 	return Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings.OuterSingleton;
 }
-template<> CHANGELANGUAGE_API UClass* StaticClass<UChangeLanguageDeveloperSettings>()
-{
-	return UChangeLanguageDeveloperSettings::StaticClass();
-}
 UChangeLanguageDeveloperSettings::UChangeLanguageDeveloperSettings(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(UChangeLanguageDeveloperSettings);
 UChangeLanguageDeveloperSettings::~UChangeLanguageDeveloperSettings() {}
-// End Class UChangeLanguageDeveloperSettings
+// ********** End Class UChangeLanguageDeveloperSettings *******************************************
 
-// Begin Registration
-struct Z_CompiledInDeferFile_FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics
+// ********** Begin Registration *******************************************************************
+struct Z_CompiledInDeferFile_FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h__Script_ChangeLanguage_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UChangeLanguageDeveloperSettings, UChangeLanguageDeveloperSettings::StaticClass, TEXT("UChangeLanguageDeveloperSettings"), &Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UChangeLanguageDeveloperSettings), 1713974041U) },
+		{ Z_Construct_UClass_UChangeLanguageDeveloperSettings, UChangeLanguageDeveloperSettings::StaticClass, TEXT("UChangeLanguageDeveloperSettings"), &Z_Registration_Info_UClass_UChangeLanguageDeveloperSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UChangeLanguageDeveloperSettings), 2337228680U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_2547382901(TEXT("/Script/ChangeLanguage"),
-	Z_CompiledInDeferFile_FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h__Script_ChangeLanguage_3978926406(TEXT("/Script/ChangeLanguage"),
+	Z_CompiledInDeferFile_FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h__Script_ChangeLanguage_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h__Script_ChangeLanguage_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
-// End Registration
+// ********** End Registration *********************************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
