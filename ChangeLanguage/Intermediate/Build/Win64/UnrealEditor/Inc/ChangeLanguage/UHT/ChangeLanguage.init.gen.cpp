@@ -7,23 +7,23 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeChangeLanguage_init() {}
-	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_ChangeLanguage;
+static_assert(!UE_WITH_CONSTINIT_UOBJECT, "This generated code can only be compiled with !UE_WITH_CONSTINIT_OBJECT");	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_ChangeLanguage;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_ChangeLanguage()
 	{
 		if (!Z_Registration_Info_UPackage__Script_ChangeLanguage.OuterSingleton)
 		{
-			static const UECodeGen_Private::FPackageParams PackageParams = {
-				"/Script/ChangeLanguage",
-				nullptr,
-				0,
-				PKG_CompiledIn | 0x00000040,
-				0xB06567F0,
-				0x8D3A1084,
-				METADATA_PARAMS(0, nullptr)
-			};
-			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_ChangeLanguage.OuterSingleton, PackageParams);
-		}
-		return Z_Registration_Info_UPackage__Script_ChangeLanguage.OuterSingleton;
+		static const UECodeGen_Private::FPackageParams PackageParams = {
+			"/Script/ChangeLanguage",
+			nullptr,
+			0,
+			PKG_CompiledIn | 0x00000040,
+			0x30787B94,
+			0x8D3A1084,
+			METADATA_PARAMS(0, nullptr)
+		};
+		UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_ChangeLanguage.OuterSingleton, PackageParams);
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ChangeLanguage(Z_Construct_UPackage__Script_ChangeLanguage, TEXT("/Script/ChangeLanguage"), Z_Registration_Info_UPackage__Script_ChangeLanguage, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xB06567F0, 0x8D3A1084));
+	return Z_Registration_Info_UPackage__Script_ChangeLanguage.OuterSingleton;
+}
+static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_ChangeLanguage(Z_Construct_UPackage__Script_ChangeLanguage, TEXT("/Script/ChangeLanguage"), Z_Registration_Info_UPackage__Script_ChangeLanguage, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x30787B94, 0x8D3A1084));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

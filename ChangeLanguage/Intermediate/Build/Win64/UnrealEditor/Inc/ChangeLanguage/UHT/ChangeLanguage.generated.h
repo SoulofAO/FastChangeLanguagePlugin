@@ -17,22 +17,23 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UChangeLanguageDeveloperSettings *****************************************
+struct Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics;
 CHANGELANGUAGE_API UClass* Z_Construct_UClass_UChangeLanguageDeveloperSettings_NoRegister();
 
-#define FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUChangeLanguageDeveloperSettings(); \
-	friend struct Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics; \
+	friend struct ::Z_Construct_UClass_UChangeLanguageDeveloperSettings_Statics; \
 	static UClass* GetPrivateStaticClass(); \
-	friend CHANGELANGUAGE_API UClass* Z_Construct_UClass_UChangeLanguageDeveloperSettings_NoRegister(); \
+	friend CHANGELANGUAGE_API UClass* ::Z_Construct_UClass_UChangeLanguageDeveloperSettings_NoRegister(); \
 public: \
 	DECLARE_CLASS2(UChangeLanguageDeveloperSettings, UDeveloperSettings, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ChangeLanguage"), Z_Construct_UClass_UChangeLanguageDeveloperSettings_NoRegister) \
 	DECLARE_SERIALIZER(UChangeLanguageDeveloperSettings) \
-	static const TCHAR* StaticConfigName() {return TEXT("EditorPerProjectUserSettings");} \
+	static constexpr const TCHAR* StaticConfigName() {return TEXT("EditorPerProjectUserSettings");} \
 
 
 
-#define FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UChangeLanguageDeveloperSettings(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -44,12 +45,12 @@ public: \
 	NO_API virtual ~UChangeLanguageDeveloperSettings();
 
 
-#define FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_15_PROLOG
-#define FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_GENERATED_BODY \
+#define FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_15_PROLOG
+#define FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_INCLASS_NO_PURE_DECLS \
-	FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_ENHANCED_CONSTRUCTORS \
+	FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_INCLASS_NO_PURE_DECLS \
+	FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -59,6 +60,6 @@ class UChangeLanguageDeveloperSettings;
 // ********** End Class UChangeLanguageDeveloperSettings *******************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_PluginPackage_UE5_6_0_ChangeLanguage_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h
+#define CURRENT_FILE_ID FID_HostProject_Plugins_ChangeLanguage_Source_ChangeLanguage_Public_ChangeLanguage_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
